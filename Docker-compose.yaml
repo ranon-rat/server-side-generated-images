@@ -1,0 +1,7 @@
+version: "1"
+
+services: 
+    blog:
+        build: .
+        ports: 
+            - 8080:8080
