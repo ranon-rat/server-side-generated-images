@@ -1,6 +1,6 @@
 package main
 
-import "github.com/ranon-rat/video-transmission/src/router"
+import "github.com/ranon-rat/server-side-generated-images/src/router"
 
 func main() {
 	router.SetupRouter()

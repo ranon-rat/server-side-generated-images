@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/labstack/echo"
-	"github.com/ranon-rat/video-transmission/src/controllers"
+	"github.com/ranon-rat/server-side-generated-images/src/controllers"
 )
 
 func SetupRouter() {

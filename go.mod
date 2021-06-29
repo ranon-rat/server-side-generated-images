@@ -1,4 +1,4 @@
-module github.com/ranon-rat/video-transmission
+module github.com/ranon-rat/server-side-generated-images
 
 go 1.16
 
