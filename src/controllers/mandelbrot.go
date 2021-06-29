@@ -39,14 +39,14 @@ func fractal(img *gg.Context, wr echo.Context) error {
 				if err := img.EncodePNG(wr.Response()); err != nil {
 					return err
 				}
-				wr.Response().Flush()
+
 			}
 		}
 	}
 	return nil
 }
 func MandelbrotSet(c echo.Context) error {
-	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationForm)
+
 	c.Response().Header().Add("Content-Type", "multipart/x-mixed-replace;boundary="+boundaryWord)
 	dc := gg.NewContext(width, height)
 

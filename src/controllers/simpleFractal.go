@@ -56,8 +56,6 @@ func drawCircle(x float64, y float64, radius float64, dc *gg.Context, c echo.Con
 			return err
 		}
 
-		c.Response().Flush()
-
 	}
 	return nil
 }
@@ -71,7 +69,7 @@ func draw(c echo.Context) error {
 }
 
 func SimpleFractal(c echo.Context) error {
-	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationForm)
+
 	c.Response().Header().Add("Content-Type", "multipart/x-mixed-replace;boundary="+boundaryWord)
 	log.Println("new connection")
 

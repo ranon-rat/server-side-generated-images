@@ -6,7 +6,7 @@ import (
 )
 
 func LorenzSystem(wr echo.Context) error {
-	wr.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationForm)
+
 	wr.Response().Header().Add("Content-Type", "multipart/x-mixed-replace;boundary="+boundaryWord)
 	dc := gg.NewContext(S, S)
 	x, y, z := 0.1, 0.0, 0.0
@@ -26,7 +26,7 @@ func LorenzSystem(wr echo.Context) error {
 		if err := dc.EncodePNG(wr.Response()); err != nil {
 			return err
 		}
-		wr.Response().Flush()
+
 	}
 	return nil
 }
