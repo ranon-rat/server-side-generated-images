@@ -1,7 +1,7 @@
 # video-transmission
 A simple shitty project for learn more about http
 ## how it looks(wait a second)
-![img](https://cdn.discordapp.com/attachments/820472030474272769/859406334884577300/Screen_Recording_2021-06-28_at_12.50.33.gif)
+![img](https://cdn.discordapp.com/attachments/820472030474272769/859407364238475274/p7-cpc03nEX0F8BG.gif)
 
 ## how to deploy it
 
