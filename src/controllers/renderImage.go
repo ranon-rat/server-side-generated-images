@@ -37,9 +37,15 @@ func RenderImage(c echo.Context) error {
 			dc.Fill()
 			dc.Pop()
 			time.Sleep(time.Millisecond * 200)
-			c.Response().Write([]byte(headerf))
-			dc.EncodePNG(c.Response())
-			c.Response().Write([]byte("\r"))
+			if _, err := c.Response().Write([]byte(headerf)); err != nil {
+				return err
+			}
+			if err := dc.EncodePNG(c.Response()); err != nil {
+				return err
+			}
+			if _, err := c.Response().Write([]byte("\r")); err != nil {
+				return err
+			}
 			c.Response().Flush()
 		}
 
