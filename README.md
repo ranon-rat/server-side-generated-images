@@ -1,6 +1,5 @@
 # video-transmission
-A simple shitty project for learn more about http
-
+A simple project for understanding how to stream images using the http protocol 
 ## how it looks
 |simple recursive fractal|mandelbrot set| lorenz system|
 |--|--|--|
