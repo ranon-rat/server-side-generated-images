@@ -14,7 +14,7 @@ func SetupRouter() {
 	e.GET("/lorenz", controllers.LorenzSystem)
 	/*e.GET("/image-zy", controllers.ZY)
 	e.GET("/image-yx", controllers.ZX)*/
-	e.File("/", "view/main.html")
+	e.File("/", "src/view/main.html")
 	/*e.GET("/", func(c echo.Context) error {
 		c.String(200, "<img src=\"/image\">")
 		//c.Response().Write([]byte(`<img src="/image">`))
