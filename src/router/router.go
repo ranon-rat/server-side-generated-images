@@ -1,6 +1,8 @@
 package router
 
 import (
+	"os"
+
 	"github.com/labstack/echo"
 	"github.com/ranon-rat/server-side-generated-images/src/controllers"
 )
@@ -18,5 +20,11 @@ func SetupRouter() {
 		//c.Response().Write([]byte(`<img src="/image">`))
 		return nil
 	})*/
-	e.Logger.Fatal(e.Start(":8080"))
+
+	port, exist := os.LookupEnv("PORT")
+	if !exist {
+		port = "8080"
+	}
+	e.Logger.Fatal(e.Start(":" + port))
 }
+
